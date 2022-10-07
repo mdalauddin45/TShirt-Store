@@ -11,8 +11,14 @@ function Home() {
 
   //   console.log(tShirts);
   const handleAddToCart = (tShirt) => {
-    const newCart = [...cart, tShirt];
-    setCart(newCart);
+    const exists = cart.find((ts) => ts._id === tShirt._id);
+    if (exists) {
+      alert("added");
+    } else {
+      const newCart = [...cart, tShirt];
+      setCart(newCart);
+      alert("added successfuly");
+    }
   };
   return (
     <div className="home-container">
