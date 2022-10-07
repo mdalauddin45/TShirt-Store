@@ -4,8 +4,8 @@ import "./Header.css";
 
 function Header() {
   return (
-    <div>
-      <Link to="/home">Home</Link>
+    <div className="header">
+      <Link to="/">Home</Link>
       <Link to="/order">Order</Link>
       <Link to="/about">About</Link>
     </div>
