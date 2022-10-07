@@ -1,6 +1,8 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from "./components/About/About";
 import Home from "./components/Home/Home";
+import Order from "./components/Order/Order";
 import Main from "./layout/Main";
 
 function App() {
@@ -9,9 +11,11 @@ function App() {
       path: "/",
       element: <Main></Main>,
       children: [
-        { path: "/", element: <Home></Home> },
-        { path: "/order", element: <Home></Home> },
-        { path: "/about", element: <Home></Home> },
+        { path: "/", element: <Home></Home>,
+      loader: 
+      },
+        { path: "/order", element: <Order></Order> },
+        { path: "/about", element: <About></About> },
       ],
     },
   ]);
