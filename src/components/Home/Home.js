@@ -17,8 +17,13 @@ function Home() {
     } else {
       const newCart = [...cart, tShirt];
       setCart(newCart);
-      alert("added successfuly");
+      //   alert("added successfuly");
     }
+  };
+  const handleRemoveItem = (tshirt) => {
+    const remaining = cart.filter((ts) => ts._id !== tshirt._id);
+    setCart(remaining);
+    // console.log(tshirt);
   };
   return (
     <div className="home-container">
@@ -32,7 +37,7 @@ function Home() {
         ))}
       </div>
       <div className="cart-container">
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart} handleRemoveItem={handleRemoveItem}></Cart>
       </div>
     </div>
   );
